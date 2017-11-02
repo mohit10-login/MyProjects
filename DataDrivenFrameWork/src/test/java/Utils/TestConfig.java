@@ -4,22 +4,25 @@ public class TestConfig{
 
 	
 	public static String server="smtp.gmail.com";
-	public static String from = "vaffaproject@gmail.com";
-	public static String password = "Selenium@123";
-	public static String[] to ={"seleniumcoaching@gmail.com","trainer@way2automation.com"};
+	public static String from = "100dqalivecareer@gmail.com";
+	public static String password = "100dqa@lc";
+	public static String[] to ={"mohit.sharma2@bold.com"};
 	public static String subject = "Test Report";
 	
 	public static String messageBody ="TestMessage";
-	public static String attachmentPath="f:\\screenshot\\error.jpg";
-	public static String attachmentName="error.jpg";
+	public static String attachmentPath="D:\\Test.jpg";
+	public static String attachmentName="Error.jpg";
 	
 	
 	
 	//SQL DATABASE DETAILS	
-	public static String driver="net.sourceforge.jtds.jdbc.Driver"; 
-	public static String dbConnectionUrl="jdbc:jtds:sqlserver://192.101.44.22;DatabaseName=monitor_eval"; 
-	public static String dbUserName="sa"; 
-	public static String dbPassword="$ql$!!1"; 
+	public static String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
+	//public static String driver="net.sourceforge.jtds.jdbc.Driver"; 
+	public static String dbHost="cmpddev.database.windows.net"; 
+	public static String dbPortNumber="1433";
+	public static String dbName="CompanyDirectory";
+	public static String dbUserName="cmpdteam"; 
+	public static String dbPassword="@Wsde246!"; 
 	
 	
 	//MYSQL DATABASE DETAILS
@@ -27,13 +30,5 @@ public class TestConfig{
 	public static String mysqluserName = "root";
 	public static String mysqlpassword = "selenium";
 	public static String mysqlurl = "jdbc:mysql://localhost:3306/1stoct2017";
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

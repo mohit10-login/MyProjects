@@ -12,23 +12,31 @@ import java.util.List;
 
 public class DBManager
 {
-	private static Connection con = null; //sql
-	private static Connection conn = null; //mysql
-
+	public static Connection con = null; //sql
+	public static Connection conn = null; //mysql
+	
+	
 	//SQL Server
 	public static void setDbConnection() throws SQLException, ClassNotFoundException
 	{
 		try{
-		Class.forName(TestConfig.driver);
-		con =	DriverManager.getConnection(TestConfig.dbConnectionUrl, TestConfig.dbUserName, TestConfig.dbPassword);
+			
+			DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
+			DriverManager.setLoginTimeout(100);
+			Class.forName(TestConfig.driver);
 		
-		if(!con.isClosed())
+		//DB_URL = "jdbc:sqlserver://" + SQL_HOST + ":" + SQL_PORT + ";DatabaseName=" + db + ";user=" + SQL_USER + ";password=" + SQL_PWD;
+		String DB_URL = "jdbc:sqlserver://" + TestConfig.dbHost + ":" + TestConfig.dbPortNumber + ";DatabaseName=" + TestConfig.dbName + ";user=" + TestConfig.dbUserName + ";password=" + TestConfig.dbPassword;
+		con =	DriverManager.getConnection(DB_URL);
+		
+		
+		//if(!con.isClosed())
 			System.out.println("Successfully connected to SQL server");
 			
 	}catch(Exception e){
 		System.err.println("Exception: " + e.getMessage());
 
-		//monitoringMail.sendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject+" - (Script failed with Error, Datamart database used for reports, connection not established)", TestConfig.messageBody, TestConfig.attachmentPath, TestConfig.attachmentName);			
+		//Utils.SendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject+" - (Script failed with Error, Datamart database used for reports, connection not established)", TestConfig.messageBody, TestConfig.attachmentPath, TestConfig.attachmentName);			
 		}
 		
 		
@@ -50,7 +58,7 @@ public class DBManager
     {
         System.err.println ("Cannot connect to database server");
        
-       // monitoringMail.sendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject+" - (Script failed with Error, Datamart database used for reports, connection not established)", TestConfig.messageBody, TestConfig.attachmentPath, TestConfig.attachmentName);
+       // Utils.SendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject+" - (Script failed with Error, Datamart database used for reports, connection not established)", TestConfig.messageBody, TestConfig.attachmentPath, TestConfig.attachmentName);
     }
    
 
@@ -89,15 +97,17 @@ public class DBManager
 		return values1;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	public static Connection getConnection()
+	public static Connection getConnection() throws ClassNotFoundException, SQLException
 	{
-		return con;
-			}
+		if(!(con==null))
+		{
+			return con;
+		}
+		else
+		{
+			DBManager.setDbConnection();
+			return con;
+		}
+	}
+		
 }

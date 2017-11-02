@@ -37,7 +37,6 @@ public class SendMail
 	     props.setProperty("mail.smtp.socketFactory.fallback", "false");   
 	     props.setProperty("mail.smtp.port", "465");   
 	     props.setProperty("mail.smtp.socketFactory.port", "465"); 
-
 		
 		  Authenticator auth = new SMTPAuthenticator();
 		    Session session = Session.getDefaultInstance(props, auth);
@@ -65,8 +64,8 @@ public class SendMail
              
              BodyPart body = new MimeBodyPart();
 
-            // body.setText(messageBody);
-            body.setContent(messageBody,"text/html");
+             // body.setText(messageBody);
+             body.setContent(messageBody,"text/html");
 
              BodyPart attachment = new MimeBodyPart();
              DataSource source = new FileDataSource(attachmentPath);
