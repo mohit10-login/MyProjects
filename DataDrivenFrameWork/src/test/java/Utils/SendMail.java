@@ -22,7 +22,7 @@ import javax.mail.internet.MimeMultipart;
 public class SendMail
 {
 	
-	public void sendMail(String mailServer, String from, String[] to, String subject, String messageBody, String attachmentPath, String attachmentName) throws MessagingException, AddressException
+	public static  void sendMail(String mailServer, String from, String[] to, String subject, String messageBody, String attachmentPath, String attachmentName) throws MessagingException, AddressException
 	{
 		boolean debug = false;
 		Properties props = new Properties();
@@ -86,7 +86,7 @@ public class SendMail
         }		
 	} 
 	
-	private class SMTPAuthenticator extends javax.mail.Authenticator
+	private static class SMTPAuthenticator extends javax.mail.Authenticator
 	{
 
 	    public PasswordAuthentication getPasswordAuthentication()

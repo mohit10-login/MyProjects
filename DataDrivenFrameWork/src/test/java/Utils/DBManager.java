@@ -1,6 +1,7 @@
 package Utils;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,85 +9,85 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
+
+import org.testng.annotations.Test;
+import org.testng.internal.Utils;
+
 
 
 public class DBManager
 {
-	public static Connection con = null; //sql
-	public static Connection conn = null; //mysql
+	private static DBManager instance=null;
+	private Connection sqlServerConnection=null;
+	private Connection MySqlConnection=null;
+	private String dbURL=null;
+	private Statement st=null;
+	public ResultSet rs= null;
 	
-	
-	//SQL Server
-	public static void setDbConnection() throws SQLException, ClassNotFoundException
+	private DBManager()
 	{
-		try{
-			
-			DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
-			DriverManager.setLoginTimeout(100);
-			Class.forName(TestConfig.driver);
-		
-		//DB_URL = "jdbc:sqlserver://" + SQL_HOST + ":" + SQL_PORT + ";DatabaseName=" + db + ";user=" + SQL_USER + ";password=" + SQL_PWD;
-		String DB_URL = "jdbc:sqlserver://" + TestConfig.dbHost + ":" + TestConfig.dbPortNumber + ";DatabaseName=" + TestConfig.dbName + ";user=" + TestConfig.dbUserName + ";password=" + TestConfig.dbPassword;
-		con =	DriverManager.getConnection(DB_URL);
-		
-		
-		//if(!con.isClosed())
-			System.out.println("Successfully connected to SQL server");
-			
-	}catch(Exception e){
-		System.err.println("Exception: " + e.getMessage());
-
-		//Utils.SendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject+" - (Script failed with Error, Datamart database used for reports, connection not established)", TestConfig.messageBody, TestConfig.attachmentPath, TestConfig.attachmentName);			
-		}
-		
-		
 	}
 	
-	public static void setMysqlDbConnection() throws SQLException, ClassNotFoundException
-    {
-    try
-    {
-        
-        Class.forName (TestConfig.mysqldriver);
-        conn = DriverManager.getConnection (TestConfig.mysqlurl, TestConfig.mysqluserName, TestConfig.mysqlpassword);
-        if(!conn.isClosed())
+	public static DBManager getinstance()
+	{
+		if(instance==null)
+			instance=new DBManager();
+		return instance;
+	}
+	
+	public String getDBURL()
+	{
+		dbURL="jdbc:sqlserver://" + TestConfig.dbHost + ":" + TestConfig.dbPortNumber + ";DatabaseName=" + TestConfig.dbName;
+		return dbURL;
+	}
+	//=============================================================================================================================
+	//MS-SQL Server
+	
+	public void setConnectionToSQLServer() throws Exception
+	{
+		if(sqlServerConnection==null)
+		{
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		sqlServerConnection=DriverManager.getConnection(getinstance().getDBURL(),TestConfig.dbUserName, TestConfig.dbPassword);	
+		if(!sqlServerConnection.isClosed())
 			System.out.println("Successfully connected to MySQL server");
-			
+        else
+        {
+        	System.out.println("Unable to Connect with MYSQL Server");
+        	//SendMail.sendMail(mailServer, from, to, subject, messageBody, attachmentPath, attachmentName);
+        }
+		}
+	}
 	
-    }
-    catch (Exception e)
-    {
-        System.err.println ("Cannot connect to database server");
-       
-       // Utils.SendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject+" - (Script failed with Error, Datamart database used for reports, connection not established)", TestConfig.messageBody, TestConfig.attachmentPath, TestConfig.attachmentName);
-    }
-   
-
-}
-	
-	
-	
-	
-		
-	public static List<String> getQuery(String query) throws SQLException{
-		
-		//String Query="select top 10* from ev_call";
-		Statement St = con.createStatement();
-		ResultSet rs = St.executeQuery(query);
+	public List<String> executesqlquery(String query) throws SQLException{
+		st = sqlServerConnection.createStatement();
+		 rs = st.executeQuery(query);
 		List<String> values = new ArrayList<String>();
 		while(rs.next()){
-		
-			values.add(rs.getString(1));
-			
+			values.add(rs.getString(1));			
 		}
 		return values;
 	}
+//=============================================================================================================================	
+	//MySQL Server Connection
 	
-	public static List<String> getMysqlQuery(String query) throws SQLException{
+	public void setMysqlDbConnection() throws Exception
+    {
+        Class.forName (TestConfig.mysqldriver);
+        MySqlConnection = DriverManager.getConnection (TestConfig.mysqlurl, TestConfig.mysqluserName, TestConfig.mysqlpassword);
+        if(!MySqlConnection.isClosed())
+			System.out.println("Successfully connected to MySQL server");
+        else
+        	System.out.println("Unable to Connect with MYSQL Server");
+    }
+	
+	public List<String> getMysqlQuery(String query) throws SQLException{
 		
 		
-		Statement St = conn.createStatement();
-		ResultSet rs = St.executeQuery(query);
+		st = MySqlConnection.createStatement();
+		rs = st.executeQuery(query);
 		List<String> values1 = new ArrayList<String>();
 		while(rs.next()){
 			
@@ -96,18 +97,28 @@ public class DBManager
 		}
 		return values1;
 	}
+//=================================================================================================================
 	
-	public static Connection getConnection() throws ClassNotFoundException, SQLException
+	public Connection getSQLServerConnection() throws Exception
 	{
-		if(!(con==null))
-		{
-			return con;
-		}
+		if(this.sqlServerConnection!=null)
+			return this.sqlServerConnection;
 		else
 		{
-			DBManager.setDbConnection();
-			return con;
+			getinstance().setConnectionToSQLServer();
+			return this.sqlServerConnection;
 		}
+	}
+	
+	public Connection getMYSQLConnection() throws Exception
+	{
+		if(this.sqlServerConnection!=null)
+		return this.sqlServerConnection;
+		else
+		{
+			getinstance().setMysqlDbConnection();
+			return this.sqlServerConnection;
+		}		
 	}
 		
 }

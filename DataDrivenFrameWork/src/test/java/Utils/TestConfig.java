@@ -16,13 +16,13 @@ public class TestConfig{
 	
 	
 	//SQL DATABASE DETAILS	
-	public static String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
+	public static final String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
 	//public static String driver="net.sourceforge.jtds.jdbc.Driver"; 
-	public static String dbHost="cmpddev.database.windows.net"; 
-	public static String dbPortNumber="1433";
-	public static String dbName="CompanyDirectory";
-	public static String dbUserName="cmpdteam"; 
-	public static String dbPassword="@Wsde246!"; 
+	public static final String dbHost="cmpddev.database.windows.net"; 
+	public static final String dbPortNumber="1433";
+	public static final String dbName="COMPANYDIRECTORY";
+	public static final String dbUserName="cmpdteam"; 
+	public static final String dbPassword="@Wsde246!"; 
 	
 	
 	//MYSQL DATABASE DETAILS
