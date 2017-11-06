@@ -15,6 +15,8 @@ import javax.mail.internet.AddressException;
 import org.testng.annotations.Test;
 import org.testng.internal.Utils;
 
+import Base.Base;
+
 
 
 public class DBManager
@@ -47,15 +49,16 @@ public class DBManager
 	
 	public void setConnectionToSQLServer() throws Exception
 	{
+		Base.log.debug("Setting Up Connection with DB");
 		if(sqlServerConnection==null)
 		{
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		sqlServerConnection=DriverManager.getConnection(getinstance().getDBURL(),TestConfig.dbUserName, TestConfig.dbPassword);	
 		if(!sqlServerConnection.isClosed())
-			System.out.println("Successfully connected to MySQL server");
+			Base.log.debug("Connectin Successfully Created with DB, Name => " + TestConfig.dbName);
         else
         {
-        	System.out.println("Unable to Connect with MYSQL Server");
+        	Base.log.debug("Unable to Connect with SQL Server");
         	//SendMail.sendMail(mailServer, from, to, subject, messageBody, attachmentPath, attachmentName);
         }
 		}
@@ -113,12 +116,18 @@ public class DBManager
 	public Connection getMYSQLConnection() throws Exception
 	{
 		if(this.sqlServerConnection!=null)
-		return this.sqlServerConnection;
+		return this.MySqlConnection;
 		else
 		{
 			getinstance().setMysqlDbConnection();
-			return this.sqlServerConnection;
+			return this.MySqlConnection;
 		}		
+	}
+	
+	public void CloseDBConnection() throws SQLException
+	{
+		this.sqlServerConnection.close();
+		this.MySqlConnection.close();
 	}
 		
 }

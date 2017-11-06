@@ -9,6 +9,6 @@ public class Rough {
 		//obj.sendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject, TestConfig.messageBody, TestConfig.attachmentPath, TestConfig.attachmentName);
 		
 		DBManager.getinstance().setConnectionToSQLServer();
-		System.out.println(DBManager.getinstance().executesqlquery("select * from company where accessname='walmart'"));
+		System.out.println(DBManager.getinstance().executesqlquery("select name from company where accessname='walmart'"));
 	}
 }
