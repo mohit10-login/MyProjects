@@ -65,6 +65,6 @@ public class Base extends Keywords{
 		Keywords.driver.close();
 		Keywords.driver.quit();
 		log.debug("Closing DB Connection");
-		DBManager.getinstance().CloseDBConnection();
+		//DBManager.getinstance().CloseDBConnection();
 	}
 }

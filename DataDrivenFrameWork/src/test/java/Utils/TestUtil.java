@@ -19,6 +19,8 @@ public class TestUtil {
 		SCFileName = d.toString().replace(" ", "_").replace(":", "_") + ".jpg";
 		
 		File scr=((TakesScreenshot) Keywords.driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(scr, new File(System.getProperty("user.dir")+ "\\HTMLOutput\\" + SCFileName));				
+		FileUtils.copyFile(scr, new File(System.getProperty("user.dir")+ "\\HTMLOutput\\" + SCFileName));	
+		FileUtils.copyFile(scr, new File(System.getProperty("user.dir")+ "\\test-output\\html\\" + SCFileName));
+		
 	}
 }

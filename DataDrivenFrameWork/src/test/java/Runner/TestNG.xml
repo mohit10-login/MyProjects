@@ -3,7 +3,7 @@
 <suite name="DataDriven Framework">
 
 	<listeners>
-		<listener class-name="Reporting.listener"></listener>
+		<listener class-name="Reporting.Customlisteners"></listener>
 		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
 	</listeners>
 
