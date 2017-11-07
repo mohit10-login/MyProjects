@@ -16,10 +16,10 @@ import Utils.DBManager;
 
 public class Base extends Keywords{
 	
-	public static WebDriver driver=null;
 	public static Properties OR=new Properties();
 	public static Properties Config=new Properties();
 	public static FileInputStream fis=null;
+	//Log4J Property File Mapped in Pom.xml file
 	public static Logger log=Logger.getLogger("devpinoyLogger");
 	
 	@BeforeSuite
