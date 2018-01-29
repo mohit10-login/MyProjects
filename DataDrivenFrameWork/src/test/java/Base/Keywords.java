@@ -43,7 +43,7 @@ public class Keywords{
 	//This method open Browse Based on Input
 	public void openBrowser(String browser)
 	{	
-		Base.log.debug("Opening Brower => " + browser);
+		//Base.log.debug("Opening Brower => " + browser);
 		if(browser.equalsIgnoreCase("firefox"))
 		{
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\src\\test\\java\\Executables\\geckodriver.exe");
@@ -83,9 +83,9 @@ public class Keywords{
 	//This Method redirects user to Provided URL and then Maximize the Browser 
 	public void navigate(String url)
 	{
-		if(!(url.startsWith("https://")) || !(url.startsWith("http://")))
+		if(!(url.startsWith("https://")) && !(url.startsWith("http://")))
 			url="https://" + url;
-		Base.log.debug("Navigate to URL => " + url);
+		//Base.log.debug("Navigate to URL => " + url);
 		driver.get(url);
 		driver.manage().window().maximize();
 		

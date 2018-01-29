@@ -7,12 +7,13 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.spi.LoggerFactory;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-import org.testng.internal.Utils;
+import org.testng.annotations.Parameters;
 
-import Utils.DBManager;
+import Reporting.HTMLReportGenerator;
 
 public class Base extends Keywords{
 	
@@ -20,15 +21,18 @@ public class Base extends Keywords{
 	public static Properties Config=new Properties();
 	public static FileInputStream fis=null;
 	//Log4J Property File Mapped in Pom.xml file
-	public static Logger log=Logger.getLogger("devpinoyLogger");
+	public static Logger log=null;
 	
 	@BeforeSuite
 	public void setUp() throws Exception
 	{
+		//Below Property Configurator is User when Your Log4j.properties is in some other location thatn src\resources along with some java classs. 
+		PropertyConfigurator.configure(System.getProperty("user.dir")+"\\src\\test\\java\\Properties\\log4j.properties");
+		log=Logger.getLogger("devpinoyLogger");
 			try {
 				fis= new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\java\\Properties\\Config.properties");
 			} catch (FileNotFoundException e) {
-				log.debug("Config.Properties not Found on Provided Location" + "Exception :- " + e.getStackTrace());
+				log.info("Config.Properties not Found on Provided Location" + "Exception :- " + e.getStackTrace());
 			}
 			
 			try {
@@ -52,8 +56,9 @@ public class Base extends Keywords{
 			}
 		//Open Test Browser for your Test
 		Keywords.getInstance().openBrowser(Config.getProperty("Browser").trim().toString());
+		//Keywords.getInstance().openBrowser(Browser);
 		//Setting Up DB Connection
-		DBManager.getinstance().setConnectionToSQLServer();
+		//DBManager.getinstance().setConnectionToSQLServer();
 	}
 	
 	
@@ -61,6 +66,7 @@ public class Base extends Keywords{
 	@AfterSuite
 	public void tearDown() throws SQLException
 	{
+		HTMLReportGenerator.CreateHTMLReportContent();
 		log.debug("Closing all Browser Instances");
 		Keywords.driver.close();
 		Keywords.driver.quit();

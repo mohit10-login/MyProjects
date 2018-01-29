@@ -1,19 +1,13 @@
 package Utils;
 
 import java.sql.Connection;
-
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
-
-import org.testng.annotations.Test;
-import org.testng.internal.Utils;
+import Utils.*;
 
 import Base.Base;
 
@@ -49,16 +43,18 @@ public class DBManager
 	
 	public void setConnectionToSQLServer() throws Exception
 	{
-		Base.log.debug("Setting Up Connection with DB");
+		//Base.log.debug("Setting Up Connection with DB");
 		if(sqlServerConnection==null)
 		{
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		sqlServerConnection=DriverManager.getConnection(getinstance().getDBURL(),TestConfig.dbUserName, TestConfig.dbPassword);	
 		if(!sqlServerConnection.isClosed())
-			Base.log.debug("Connectin Successfully Created with DB, Name => " + TestConfig.dbName);
+			System.out.println("Connect with SQL Server Successfully");
+			//Base.log.debug("Connectin Successfully Created with DB, Name => " + TestConfig.dbName);
         else
         {
-        	Base.log.debug("Unable to Connect with SQL Server");
+        	System.out.println("Unable to Connect with SQL Server");
+        	//Base.log.debug("Unable to Connect with SQL Server");
         	//SendMail.sendMail(mailServer, from, to, subject, messageBody, attachmentPath, attachmentName);
         }
 		}
