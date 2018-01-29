@@ -1,0 +1,8 @@
+06/12/2017 17:15:50 devpinoyLogger Loading Logs4j.property file for loggin
+06/12/2017 17:15:50 devpinoyLogger Config.property file loaded successfully
+06/12/2017 17:15:50 devpinoyLogger Project.property file loaded successfully
+06/12/2017 17:15:58 devpinoyLogger Entering Data/Input => mohit.sharma2@bold.com into => xpath =>//input[@name='signinUserName']
+06/12/2017 17:15:58 devpinoyLogger Entering Data/Input => test@1234 into => xpath =>//input[@name='signinPassword']
+06/12/2017 17:15:59 devpinoyLogger Creating Final Execution HTML Report.
+06/12/2017 17:15:59 devpinoyLogger Execution HTML Report Genrated.
+06/12/2017 17:15:59 devpinoyLogger Closing Current Instance of Browser

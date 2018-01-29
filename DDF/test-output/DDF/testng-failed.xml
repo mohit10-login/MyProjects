@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [DDF]" parallel="tests">
+  <listeners>
+    <listener class-name="Reporting.CustomListeners"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+  </listeners>
+  <test name="CMPD Login Test(failed)" parallel="tests">
+    <classes>
+      <class name="Test_Cases.TestCase">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="TestCaseID_001"/>
+        </methods>
+      </class> <!-- Test_Cases.TestCase -->
+    </classes>
+  </test> <!-- CMPD Login Test(failed) -->
+</suite> <!-- Failed suite [DDF] -->
