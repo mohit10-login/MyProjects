@@ -1,0 +1,64 @@
+2017-10-13 13:44:05 INFO  LogsUtil:10 - =====================================================================<<Creating (Screen Shots) Directory Under Root Folder>>=====================================================================
+2017-10-13 13:44:05 INFO  LogsUtil:10 - =====================================================================<<Excecutiong Start>>=====================================================================
+2017-10-13 13:44:06 INFO  LogsUtil:10 - =====================================================================<<Fetching Data From Excel>> @Path : .\Compare_URL.xlsx=====================================================================
+2017-10-13 13:44:06 INFO  LogsUtil:10 - =====================================================================<<Opening Web Browser Instance>>=====================================================================
+2017-10-13 13:44:09 INFO  LogsUtil:10 - =====================================================================<<Executing S.No = (1) Case from Sheet >>=====================================================================
+2017-10-13 13:44:09 INFO  LogsUtil:10 - <<Creating Test Case (1) Dirctory under Screen Shot Folder>>
+2017-10-13 13:44:33 INFO  LogsUtil:10 - Saving Expected URL Screen Shot
+2017-10-13 13:44:34 INFO  LogsUtil:10 - Saving Actual URL Screen Shot
+2017-10-13 13:44:34 INFO  LogsUtil:10 - Mismatched Percentage at the Time of Comparision = 0.0
+2017-10-13 13:44:34 INFO  LogsUtil:10 - Test Result =Pass
+2017-10-13 13:44:34 INFO  LogsUtil:10 - =====================================================================<<End of S.No = (1) Case>>=====================================================================
+2017-10-13 13:44:34 INFO  LogsUtil:10 - =====================================================================<<Executing S.No = (2) Case from Sheet >>=====================================================================
+2017-10-13 13:44:34 INFO  LogsUtil:10 - <<Creating Test Case (2) Dirctory under Screen Shot Folder>>
+2017-10-13 13:44:38 INFO  LogsUtil:10 - Saving Expected URL Screen Shot
+2017-10-13 13:44:39 INFO  LogsUtil:10 - Saving Actual URL Screen Shot
+2017-10-13 13:44:39 INFO  LogsUtil:10 - Mismatched Percentage at the Time of Comparision = 0.0
+2017-10-13 13:44:39 INFO  LogsUtil:10 - Test Result =Pass
+2017-10-13 13:44:39 INFO  LogsUtil:10 - =====================================================================<<End of S.No = (2) Case>>=====================================================================
+2017-10-13 13:44:39 INFO  LogsUtil:10 - =====================================================================<<Executing S.No = (3) Case from Sheet >>=====================================================================
+2017-10-13 13:44:39 INFO  LogsUtil:10 - <<Creating Test Case (3) Dirctory under Screen Shot Folder>>
+2017-10-13 13:44:41 INFO  LogsUtil:10 - Saving Expected URL Screen Shot
+2017-10-13 13:44:45 INFO  LogsUtil:10 - Saving Actual URL Screen Shot
+2017-10-13 13:44:45 INFO  LogsUtil:10 - Mismatched Percentage at the Time of Comparision = 4.543706965852295E-5
+2017-10-13 13:44:45 INFO  LogsUtil:10 - Creating Differnce File under Test Case/S.No Case Folder
+2017-10-13 13:44:45 INFO  LogsUtil:10 - Test Result =Fail
+2017-10-13 13:44:45 INFO  LogsUtil:10 - =====================================================================<<End of S.No = (3) Case>>=====================================================================
+2017-10-13 13:44:45 INFO  LogsUtil:10 - =====================================================================<<Closing Web Browser Instance>>=====================================================================
+2017-10-13 13:44:48 INFO  LogsUtil:10 - =====================================================================<<End of Execution>>=====================================================================
+2017-10-30 10:19:57 INFO  LogsUtil:10 - =====================================================================<<Creating (Screen Shots) Directory Under Root Folder>>=====================================================================
+2017-10-30 10:19:57 INFO  LogsUtil:10 - =====================================================================<<Excecutiong Start>>=====================================================================
+2017-10-30 10:19:57 ERROR LogsUtil:14 - null\Compare_URL.xlsx (The system cannot find the path specified)
+2017-10-30 10:19:57 INFO  LogsUtil:10 - =====================================================================<<Opening Web Browser Instance>>=====================================================================
+2017-10-30 10:20:01 ERROR LogsUtil:14 - 
+2017-10-30 10:20:01 INFO  LogsUtil:10 - =====================================================================<<Closing Web Browser Instance>>=====================================================================
+2017-10-30 10:20:01 INFO  LogsUtil:10 - =====================================================================<<End of Execution>>=====================================================================
+2017-10-30 10:21:28 INFO  LogsUtil:10 - =====================================================================<<Creating (Screen Shots) Directory Under Root Folder>>=====================================================================
+2017-10-30 10:21:28 INFO  LogsUtil:10 - =====================================================================<<Excecutiong Start>>=====================================================================
+2017-10-30 10:21:29 INFO  LogsUtil:10 - =====================================================================<<Fetching Data From Excel>> @Path : C:\Users\mohit.sharma2\workspace\ImageComparision\Compare_URL.xlsx=====================================================================
+2017-10-30 10:21:29 INFO  LogsUtil:10 - =====================================================================<<Opening Web Browser Instance>>=====================================================================
+2017-10-30 10:21:32 INFO  LogsUtil:10 - =====================================================================<<Executing S.No = (1) Case from Sheet >>=====================================================================
+2017-10-30 10:21:32 INFO  LogsUtil:10 - <<Creating Test Case (1) Dirctory under Screen Shot Folder>>
+2017-10-30 10:21:36 INFO  LogsUtil:10 - Saving Expected URL Screen Shot
+2017-10-30 10:21:37 INFO  LogsUtil:10 - Saving Actual URL Screen Shot
+2017-10-30 10:21:38 INFO  LogsUtil:10 - Mismatched Percentage at the Time of Comparision = 0.0
+2017-10-30 10:21:38 INFO  LogsUtil:10 - Test Result =Pass
+2017-10-30 10:21:38 INFO  LogsUtil:10 - =====================================================================<<End of S.No = (1) Case>>=====================================================================
+2017-10-30 10:21:38 INFO  LogsUtil:10 - =====================================================================<<Executing S.No = (2) Case from Sheet >>=====================================================================
+2017-10-30 10:21:38 INFO  LogsUtil:10 - <<Creating Test Case (2) Dirctory under Screen Shot Folder>>
+2017-10-30 10:21:42 INFO  LogsUtil:10 - Saving Expected URL Screen Shot
+2017-10-30 10:21:42 INFO  LogsUtil:10 - Saving Actual URL Screen Shot
+2017-10-30 10:21:43 INFO  LogsUtil:10 - Mismatched Percentage at the Time of Comparision = 4.775261263150536E-4
+2017-10-30 10:21:43 INFO  LogsUtil:10 - Creating Differnce File under Test Case/S.No Case Folder
+2017-10-30 10:21:43 INFO  LogsUtil:10 - Test Result =Fail
+2017-10-30 10:21:43 INFO  LogsUtil:10 - =====================================================================<<End of S.No = (2) Case>>=====================================================================
+2017-10-30 10:21:43 INFO  LogsUtil:10 - =====================================================================<<Executing S.No = (3) Case from Sheet >>=====================================================================
+2017-10-30 10:21:43 INFO  LogsUtil:10 - <<Creating Test Case (3) Dirctory under Screen Shot Folder>>
+2017-10-30 10:21:46 INFO  LogsUtil:10 - Saving Expected URL Screen Shot
+2017-10-30 10:22:04 INFO  LogsUtil:10 - Saving Actual URL Screen Shot
+2017-10-30 10:22:04 INFO  LogsUtil:10 - Mismatched Percentage at the Time of Comparision = 5.343224633882074E-4
+2017-10-30 10:22:04 INFO  LogsUtil:10 - Creating Differnce File under Test Case/S.No Case Folder
+2017-10-30 10:22:04 INFO  LogsUtil:10 - Test Result =Fail
+2017-10-30 10:22:04 INFO  LogsUtil:10 - =====================================================================<<End of S.No = (3) Case>>=====================================================================
+2017-10-30 10:22:04 INFO  LogsUtil:10 - =====================================================================<<Closing Web Browser Instance>>=====================================================================
+2017-10-30 10:22:07 INFO  LogsUtil:10 - =====================================================================<<End of Execution>>=====================================================================

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Image Comparision]" allow-return-values="true">
+  <test name="Image_Comparision(failed)">
+    <classes>
+      <class name="CompareImages.Test">
+        <methods>
+          <include name="AfterSuite"/>
+          <include name="BeforeSuite"/>
+          <include name="Testcase"/>
+        </methods>
+      </class> <!-- CompareImages.Test -->
+    </classes>
+  </test> <!-- Image_Comparision(failed) -->
+</suite> <!-- Failed suite [Image Comparision] -->

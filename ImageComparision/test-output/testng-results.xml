@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Image Comparision" duration-ms="38365" started-at="2017-10-30T04:51:28Z" finished-at="2017-10-30T04:52:07Z">
+    <groups>
+    </groups>
+    <test name="Image_Comparision" duration-ms="38365" started-at="2017-10-30T04:51:28Z" finished-at="2017-10-30T04:52:07Z">
+      <class name="CompareImages.Test">
+        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:CompareImages.Test@3c756e4d]" name="BeforeSuite" is-config="true" duration-ms="142" started-at="2017-10-30T10:21:28Z" finished-at="2017-10-30T10:21:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeSuite -->
+        <test-method status="PASS" signature="Testcase()[pri:0, instance:CompareImages.Test@3c756e4d]" name="Testcase" duration-ms="38355" started-at="2017-10-30T10:21:28Z" finished-at="2017-10-30T10:22:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Testcase -->
+        <test-method status="PASS" signature="AfterSuite()[pri:0, instance:CompareImages.Test@3c756e4d]" name="AfterSuite" is-config="true" duration-ms="0" started-at="2017-10-30T10:22:07Z" finished-at="2017-10-30T10:22:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterSuite -->
+      </class> <!-- CompareImages.Test -->
+    </test> <!-- Image_Comparision -->
+  </suite> <!-- Image Comparision -->
+</testng-results>

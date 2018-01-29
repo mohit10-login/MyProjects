@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="API Test" duration-ms="3206" started-at="2017-11-15T06:48:24Z" finished-at="2017-11-15T06:48:27Z">
+    <groups>
+    </groups>
+    <test name="API Testing" duration-ms="3206" started-at="2017-11-15T06:48:24Z" finished-at="2017-11-15T06:48:27Z">
+      <class name="TestCases.APITestCases">
+        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:TestCases.APITestCases@6d78f375]" name="BeforeSuite" is-config="true" duration-ms="996" started-at="2017-11-15T12:18:23Z" finished-at="2017-11-15T12:18:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeSuite -->
+        <test-method status="PASS" signature="TestCase_001()[pri:0, instance:TestCases.APITestCases@6d78f375]" name="TestCase_001" duration-ms="757" started-at="2017-11-15T12:18:24Z" description="Verify V2-GETCOMPANY Methode with Accessname and IsTestCompany=False" finished-at="2017-11-15T12:18:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase_001 -->
+        <test-method status="PASS" signature="TestCase_002()[pri:0, instance:TestCases.APITestCases@6d78f375]" name="TestCase_002" duration-ms="990" started-at="2017-11-15T12:18:25Z" description="Verify V2-POSTCompany Methode with Valid Data" finished-at="2017-11-15T12:18:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase_002 -->
+        <test-method status="PASS" signature="TestCase_004()[pri:0, instance:TestCases.APITestCases@6d78f375]" name="TestCase_004" duration-ms="605" started-at="2017-11-15T12:18:26Z" description="Verify V2-Put_addcompanyprocesscompleteded Methode with Valid Data" finished-at="2017-11-15T12:18:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase_004 -->
+        <test-method status="PASS" signature="TestCase_003()[pri:0, instance:TestCases.APITestCases@6d78f375]" name="TestCase_003" duration-ms="844" started-at="2017-11-15T12:18:26Z" description="Verify V2-DELETECompany Methode with Valid Data" finished-at="2017-11-15T12:18:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase_003 -->
+        <test-method status="PASS" signature="AfterSuite()[pri:0, instance:TestCases.APITestCases@6d78f375]" name="AfterSuite" is-config="true" duration-ms="0" started-at="2017-11-15T12:18:27Z" finished-at="2017-11-15T12:18:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterSuite -->
+      </class> <!-- TestCases.APITestCases -->
+    </test> <!-- API Testing -->
+  </suite> <!-- API Test -->
+</testng-results>

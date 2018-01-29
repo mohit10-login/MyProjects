@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/activation-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/commons-collections4-4.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/commons-configuration-1.7.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/commons-email-1.5.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/commons-email-1.5-javadoc.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/commons-email-1.5-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/commons-email-1.5-tests.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/commons-email-1.5-test-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/httpclient-4.5.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/java-json.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/javax.mail-0.4-incubating-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/jcommander-1.29.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/jcommon-1.0.17.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/log4j-1.2.13.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/mail-1.4.1.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/org.apache.commons.collections.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/poi-3.17-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/poi-examples-3.17-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/poi-excelant-3.17-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/poi-ooxml-3.17-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/poi-ooxml-schemas-3.17-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/poi-scratchpad-3.17-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/selenium-server-standalone-3.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/testng-6.8.8.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/ws-commons-util-1.0.2.jar"/>
+	<classpathentry kind="lib" path="D:/Mywork/MyProjects/Test_API/lib/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

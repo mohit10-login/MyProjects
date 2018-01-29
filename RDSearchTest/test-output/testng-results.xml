@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="19639" started-at="2017-12-18T06:04:50Z" finished-at="2017-12-18T06:05:10Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="19639" started-at="2017-12-18T06:04:50Z" finished-at="2017-12-18T06:05:10Z">
+      <class name="Test.TestCase_Searches">
+        <test-method status="PASS" signature="BeforSuite()[pri:0, instance:Test.TestCase_Searches@5afa04c]" name="BeforSuite" is-config="true" duration-ms="135" started-at="2017-12-18T11:34:50Z" finished-at="2017-12-18T11:34:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforSuite -->
+        <test-method status="PASS" signature="verifySearches()[pri:0, instance:Test.TestCase_Searches@5afa04c]" name="verifySearches" duration-ms="19629" started-at="2017-12-18T11:34:50Z" finished-at="2017-12-18T11:35:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySearches -->
+        <test-method status="PASS" signature="AfterSuite()[pri:0, instance:Test.TestCase_Searches@5afa04c]" name="AfterSuite" is-config="true" duration-ms="2411" started-at="2017-12-18T11:35:10Z" finished-at="2017-12-18T11:35:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterSuite -->
+      </class> <!-- Test.TestCase_Searches -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

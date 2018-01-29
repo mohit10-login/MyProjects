@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="API Test" allow-return-values="true">
+<test name="API Testing" allow-return-values="true">
+<classes>
+	<class name="TestCases.APITestCases"/>
+</classes>
+</test>
+</suite>

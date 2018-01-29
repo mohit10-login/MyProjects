@@ -1,0 +1,10 @@
+<suite name="TestNG-Test" allow-return-values="true">
+<parameter name="Testbrowser" value="Chrome"></parameter>
+<test name="TestNG" allow-return-values="true">
+<parameter name="CookieName" value="vstr"/>
+<parameter name="DeleteCookieName" value="vstr"/>
+<classes>
+<class name="TestNGPracticePackage.TestParameters"/>
+</classes>
+</test>
+</suite>

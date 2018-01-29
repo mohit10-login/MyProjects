@@ -1,0 +1,7 @@
+<suite name="RD-Searches" allow-return-values="true">
+<test name="Test-RD-Search" allow-return-values="true">
+<classes>
+	<class name="Test.TestCase_Searches"/>
+</classes>
+</test>
+</suite>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [RD-Searches]" allow-return-values="true">
+  <test name="Test-RD-Search(failed)">
+    <classes>
+      <class name="Test.TestCase_Searches">
+        <methods>
+          <include name="verifySearches"/>
+          <include name="BeforSuite"/>
+        </methods>
+      </class> <!-- Test.TestCase_Searches -->
+    </classes>
+  </test> <!-- Test-RD-Search(failed) -->
+</suite> <!-- Failed suite [RD-Searches] -->

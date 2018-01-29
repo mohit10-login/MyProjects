@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestNG-Test]" allow-return-values="true">
+  <parameter name="DeleteCookieName" value="vstr"/>
+  <parameter name="CookieName" value="vstr"/>
+  <parameter name="Testbrowser" value="Chrome"/>
+  <test name="TestNG(failed)">
+    <parameter name="DeleteCookieName" value="vstr"/>
+    <parameter name="CookieName" value="vstr"/>
+    <classes>
+      <class name="TestNGPracticePackage.TestParameters">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="srpSearch"/>
+          <include name="afterMethod"/>
+          <include name="beforeSuite"/>
+          <include name="VerifyVSTRCookieOnSRPPage" invocation-numbers="0"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- TestNGPracticePackage.TestParameters -->
+    </classes>
+  </test> <!-- TestNG(failed) -->
+</suite> <!-- Failed suite [TestNG-Test] -->

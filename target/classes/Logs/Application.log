@@ -1,0 +1,10 @@
+09/11/2017 12:03:53 devpinoyLogger Loading Config.properties File
+09/11/2017 12:03:53 devpinoyLogger Loading OR.properties File
+09/11/2017 12:03:53 devpinoyLogger Opening Brower => Chrome
+09/11/2017 12:03:55 devpinoyLogger Navigate to URL => https://qa-company.livecareer.com
+09/11/2017 12:04:02 devpinoyLogger Entering Data/Input => mohit.sharma2@bold.com into => xpath =>//input[@name='signinUserName']
+09/11/2017 12:04:02 devpinoyLogger Entering Data/Input => test@1234 into => xpath =>//input[@name='signinPassword']
+09/11/2017 12:04:02 devpinoyLogger Creating Final Execution HTML Report.
+09/11/2017 12:04:02 devpinoyLogger Execution HTML Report Genrated.
+09/11/2017 12:04:02 devpinoyLogger Closing all Browser Instances
+09/11/2017 12:04:05 devpinoyLogger Closing DB Connection
